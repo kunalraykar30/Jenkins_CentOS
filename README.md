@@ -1,3 +1,3 @@
 
-*) Install Jenkins 
-*) Install Tomcat 
+* Install Jenkins 
+* Install Tomcat 
