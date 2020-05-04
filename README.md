@@ -1,8 +1,8 @@
 # Jenkins and Tomcat on CentOS 7 
-These roles works butter smooth with the VM instances of GCP. I cloned the git repo of the ELK on my GCP VM and then ran runsetup.yaml. For GCP instances you need to install git/ansible.
+2 roles are written down which works butter smooth with the VM instances of GCP. I cloned the git repo of the ELK on my GCP VM and then ran runsetup.yaml. For GCP instances you need to install git/ansible.
 
-* Install Jenkins 
-* Install Tomcat 
+* Install Jenkins - jenkins_role
+* Install Tomcat - tomcat_role
 
 Playbook - runsetup.yaml is fired on the localhost where jenkins is going to run.
 ```
