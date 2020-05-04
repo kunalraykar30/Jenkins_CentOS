@@ -1,0 +1,28 @@
+---
+# Install Tomcat 
+
+- name: Install tomcat and other packages of tomcat 
+  yum:
+    name:
+      - tomcat
+      - tomcat-webapps
+      - tomcat-admin-webapps
+      - tomcat-docs-webapp
+      - tomcat-javadoc
+
+#- name: Replacing port 8080 to 9090 /etc/sysconfig/jenkins from J2 template 
+#  template:
+#    src: templates/jenkins.j2
+#    dest: /etc/sysconfig/jenkins
+
+- name: Start & Enable Jenkins
+  systemd:
+    name: tomcat
+    state: started
+    enabled: true
+
+- name: Waiting for Jenkins connection 
+  wait_for:
+    host: 0.0.0.0
+    port: 8080
+    state: present
