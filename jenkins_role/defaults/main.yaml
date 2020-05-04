@@ -1,0 +1,4 @@
+---
+# defaults values for jenkins
+
+jenkins_port: 9090
