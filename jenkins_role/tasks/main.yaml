@@ -3,3 +3,5 @@
 # Main Tasks file for jenkins
 
 - import_tasks: install_jenkins.yaml
+- import_tasks: install_tomcat.yaml
+
