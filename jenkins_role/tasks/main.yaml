@@ -2,4 +2,4 @@
 ---
 # Main Tasks file for jenkins
 
-- import_tasks: install_packages.yaml
+- import_tasks: install_jenkins.yaml
