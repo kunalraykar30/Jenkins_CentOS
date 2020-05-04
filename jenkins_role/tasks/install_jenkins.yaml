@@ -24,7 +24,7 @@
 
 - name: Replacing port 8080 to 9090 /etc/sysconfig/jenkins from J2 template 
   template:
-    src: templates/jenkins
+    src: templates/jenkins.j2
     dest: /etc/sysconfig/jenkins
 
 - name: Start & Enable Jenkins
