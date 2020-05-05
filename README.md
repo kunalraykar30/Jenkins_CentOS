@@ -9,6 +9,6 @@ Playbook - runsetup.yaml is fired on the localhost where jenkins is going to run
 # yum install ansible git 
 # ansible-playbook runsetup.yaml -i elk_hosts
 ```
-User name - jenkins-deployer is added inside in tomcat so jenkins can deploy the war/ear file on tomcat. 
+User name - # jenkins-deployer is added inside in tomcat so jenkins can deploy the war/ear file on tomcat. 
 
 #### Please note: Jenkins is going to run on port 9090 as tomcat is also installed on same system which will run on port 8080. 
