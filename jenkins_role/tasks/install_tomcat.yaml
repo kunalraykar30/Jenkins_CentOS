@@ -10,10 +10,11 @@
       - tomcat-docs-webapp
       - tomcat-javadoc
 
-#- name: Replacing port 8080 to 9090 /etc/sysconfig/jenkins from J2 template 
-#  template:
-#    src: templates/jenkins.j2
-#    dest: /etc/sysconfig/jenkins
+- name: Replacing port 8080 to 9090 /etc/sysconfig/jenkins from J2 template 
+  copy:
+    src: files/tomcat-users.xml
+    dest: /etc/tomcat/tomcat-users.xml
+    backup: yes
 
 - name: Start & Enable Tomcat
   systemd:
