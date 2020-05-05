@@ -10,7 +10,7 @@
       - tomcat-docs-webapp
       - tomcat-javadoc
 
-- name: Replacing port 8080 to 9090 /etc/sysconfig/jenkins from J2 template 
+- name: Adding user - jenkins-deployer in /etc/tomcat/tomcat-users.xml 
   copy:
     src: files/tomcat-users.xml
     dest: /etc/tomcat/tomcat-users.xml
