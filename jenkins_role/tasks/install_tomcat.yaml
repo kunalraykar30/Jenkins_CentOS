@@ -15,13 +15,13 @@
 #    src: templates/jenkins.j2
 #    dest: /etc/sysconfig/jenkins
 
-- name: Start & Enable Jenkins
+- name: Start & Enable Tomcat
   systemd:
     name: tomcat
     state: started
     enabled: true
 
-- name: Waiting for Jenkins connection 
+- name: Waiting for Tomcat connection 
   wait_for:
     host: 0.0.0.0
     port: 8080
