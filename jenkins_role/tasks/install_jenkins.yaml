@@ -1,11 +1,12 @@
 ---
 # Install Jenkins 
 
-- name: Install java and wget
+- name: Install java,unzip and wget
   yum:
     name:
       - wget
       - java-1.8.0-openjdk-devel
+      - unzip
 
 - name: Download jenkins.repo
   get_url:
