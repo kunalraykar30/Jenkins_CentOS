@@ -18,7 +18,7 @@
 <!-- <role rolename="manager-script"/> -->
 <!-- <role rolename="manager-jmx"/> -->
 <!-- <role rolename="manager-status"/> -->
-<!-- <user name="admin" password="adminadmin" roles="admin,manager,admin-gui,admin-script,manager-gui,manager-script,manager-jmx,mana
-ger-status" /> -->
+<user name="admin" password="adminadmin" roles="admin,manager,admin-gui,admin-script,manager-gui,manager-script,manager-jmx,mana
+ger-status" />
 <user name="jenkins-deployer" password="adminadmin" roles="manager-script" />
 </tomcat-users>
