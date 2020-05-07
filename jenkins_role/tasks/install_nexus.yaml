@@ -35,16 +35,8 @@
     group: nexus
     recurse: yes
 
-- name: Creating systemd Unit file for Nexus
-  copy:
-    src: files/nexus.service
-    dest: /etc/systemd/system/
-    
-- name: Start & Enable Nexus
-  systemd:
-    name: nexus
-    state: started
-    enabled: true
+- name: Start Nexus
+  shell: /app/nexus/bin/nexus start
 
 - name: Waiting for Nexus connection 
   wait_for:
