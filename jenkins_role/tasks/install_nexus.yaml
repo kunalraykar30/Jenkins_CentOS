@@ -33,6 +33,7 @@
     state: directory
     owner: nexus
     group: nexus
+    recurse: yes
 
 - name: Creating systemd Unit file for Nexus
   copy:
