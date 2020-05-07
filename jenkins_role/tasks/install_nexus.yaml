@@ -21,7 +21,7 @@
 - name: Rename Nexus dir
   shell: mv /app/nexus* /app/nexus
 
-- name: Ansible replace string example
+- name: Set up user as nexus
   lineinfile:
     path: /app/nexus/bin/nexus.rc
     regexp: '^#run'
