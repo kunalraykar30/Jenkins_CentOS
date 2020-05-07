@@ -35,12 +35,18 @@
     group: nexus
 
 - name: Creating systemd Unit file for Nexus
-    copy:
+  copy:
     src: files/nexus.service
     dest: /etc/systemd/system/
     
-- name: Start & Enable Tomcat
+- name: Start & Enable Nexus
   systemd:
     name: nexus
     state: started
     enabled: true
+
+- name: Waiting for Nexus connection 
+  wait_for:
+    host: 0.0.0.0
+    port: 8081
+    state: present
