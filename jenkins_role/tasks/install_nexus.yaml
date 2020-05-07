@@ -1,0 +1,46 @@
+---
+# Install Nexus 
+
+- name: Add the user Nexus to group Nexus
+  user:
+    name: nexus
+    comment: nexus artifactory user
+
+- name: Create /app/ directory for Nexus
+  file:
+    path: /app/
+    state: directory
+    mode: 0755
+
+- name: Unarchive a Nexus tar under /app/
+  unarchive:
+    src: https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+    dest: /app/
+    remote_src: yes
+
+- name: Rename Nexus dir
+  shell: mv /app/nexus* /app/nexus
+
+- name: Ansible replace string example
+  lineinfile:
+    path: /app/nexus/bin/nexus.rc
+    regexp: '^#run'
+    line: run_as_user="nexus"
+   
+- name: Changing permission of /app/ directory
+  file:
+    path: /app/
+    state: directory
+    owner: nexus
+    group: nexus
+
+- name: Creating systemd Unit file for Nexus
+    copy:
+    src: files/nexus.service
+    dest: /etc/systemd/system/
+    
+- name: Start & Enable Tomcat
+  systemd:
+    name: nexus
+    state: started
+    enabled: true
