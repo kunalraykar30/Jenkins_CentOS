@@ -1,4 +1,4 @@
-# Jenkins and Tomcat on CentOS 7 
+# Jenkins + Tomcat + Nexus on CentOS 7 
 Role is written down which works butter smooth with the VM instances of GCP. Just clone the git repo of the ELK on my GCP VM and then ran runsetup.yaml. For GCP instances you need to install git/ansible.
 
 * Install Jenkins - jenkins_role
