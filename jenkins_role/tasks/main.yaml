@@ -5,4 +5,5 @@
 - import_tasks: install_jenkins.yaml
 - import_tasks: install_tomcat.yaml
 - import_tasks: install_nexus.yaml
+- import_tasks: install_docker.yaml
 
