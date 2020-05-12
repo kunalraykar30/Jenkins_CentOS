@@ -1,0 +1,8 @@
+---
+
+# Install Docker 
+
+- name: Ensure Jenkins is Installed
+  yum :
+    name: jenkins
+    state: present
