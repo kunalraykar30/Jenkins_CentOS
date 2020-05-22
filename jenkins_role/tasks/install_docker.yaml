@@ -6,3 +6,18 @@
   yum :
     name: jenkins
     state: present
+
+- name: Ensure group "Docker" exists
+  group:
+    name: docker
+    state: present
+    
+- name: add user jenkins to docker group
+  shell: usermod -aG docker jenkins
+
+- name: Give insecure permissions to an existing file
+  file:
+    path: /var/run/docker.sock
+    owner: root
+    group: root
+    mode: '777'
