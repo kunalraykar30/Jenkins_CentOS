@@ -2,9 +2,9 @@
 
 # Install Docker 
 
-- name: Ensure Jenkins is Installed
+- name: Ensure Docker is Installed
   yum :
-    name: jenkins
+    name: docker
     state: present
 
 - name: Ensure group "Docker" exists
