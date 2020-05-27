@@ -32,7 +32,7 @@ Login Succeeded
 #
 # sudo docker tag docker.io/alpine:latest 35.225.177.197:9999/alpine:1.0.0 
 # 
-# sudo docker push 35.225.177.197:9999/alpine
+# sudo docker push 35.225.177.197:9999/alpine:1.0.0
 The push refers to a repository [35.225.177.197:9999/alpine]
 3e207b409db3: Pushed 
 1.0.0: digest: sha256:39eda93d15866957feaee28f8fc5adb545276a64147445c64992ef69804dbf01 size: 528
