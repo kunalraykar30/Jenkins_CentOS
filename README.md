@@ -29,6 +29,14 @@ All the 3 componenets - Jenkins+Tomcat+Nexus are hosted on the same system.
 Password: 
 Login Succeeded
 #
+#
+# sudo docker tag docker.io/alpine:latest 35.225.177.197:9999/alpine:1.0.0 
+# 
+# sudo docker push 35.225.177.197:9999/alpine
+The push refers to a repository [35.225.177.197:9999/alpine]
+3e207b409db3: Pushed 
+1.0.0: digest: sha256:39eda93d15866957feaee28f8fc5adb545276a64147445c64992ef69804dbf01 size: 528
+#
 ```
 
 #### Please note: Jenkins is going to run on port 9090 as tomcat is also installed on same system which will run on port 8080. While Nexus is running on default port 8081 
