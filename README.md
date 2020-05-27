@@ -31,4 +31,4 @@ Login Succeeded
 #
 ```
 
-#### Please note: Jenkins is going to run on port 9090 as tomcat is also installed on same system which will run on port 8080. WHile Nexus is running on default port 8081 
+#### Please note: Jenkins is going to run on port 9090 as tomcat is also installed on same system which will run on port 8080. While Nexus is running on default port 8081 
